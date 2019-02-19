@@ -73,7 +73,8 @@ describe 'Movie' do
         movie = can_be_created_in_a_block
 
         expect(movie.title).to eq("Home Alone")
-        expect(movie.release_date).to eq(1990)
+        expect(movie.release_date).to eq
+        expect(movie.last.release_date).to eq(1990)
       end
 
       it 'can be created in a block' do
